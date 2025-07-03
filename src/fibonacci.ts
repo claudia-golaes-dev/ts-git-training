@@ -5,6 +5,10 @@ export const computeFibonacciNumber = (position: number, recursion: boolean = fa
     if (position < 0) {
         return computeNegativeFibonacci(position);
     }
+    if (recursion) {
+        return recursiveFibonacci(1, 1, position - 2);
+    }
+
 
     if (recursion) {
         return recursiveFibonacci(1, 1, position - 2);
